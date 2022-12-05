@@ -27,7 +27,8 @@ From the retiring_titles tabel, we are able to know the totoal number of employe
   *comparsion of each title count of retiring employee and employees who are able to be the mentor, the percentage of mentor ratio are more easy to tell the distribution of employee and more easy to for company to mange the upcoming workforce transitions.* 
 (--following are creating table by query from diifferent tables)
 * From the result we can tell the highest of mentee rate is %7.16 of assistant Engineer
-* the lowest mentee is 0.65 % of senior engineer 
+* the lowest mentee is 0.65 % of senior engineer \
+
 ![fig](https://github.com/violetqq0221/Pewlett-Hackard-Analysis/blob/main/Data/percentage_mentee.PNG)
 * The suggestion for the company, we need to higher more senior engineer positions for upcoming transition. Senior engineers can bring more knowledge and exprience to the workplace. The company should consider it as factor of direction in the future. 
 
