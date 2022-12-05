@@ -27,7 +27,7 @@ From the retiring_titles tabel, we are able to know the totoal number of employe
   *comparsion of each title count of retiring employee and employees who are able to be the mentor, the percentage of mentor ratio are more easy to tell the distribution of employee and more easy to for company to mange the upcoming workforce transitions.* 
 (--following are creating table by query from diifferent tables)
 * From the result we can tell the highest of mentee rate is %7.16 of assistant Engineer
-* the lowest mentee is 0.65 % of senior engineer \
+* the lowest mentee is 0.65 % of senior engineer  
 
 ![fig](https://github.com/violetqq0221/Pewlett-Hackard-Analysis/blob/main/Data/percentage_mentee.PNG)
 * The suggestion for the company, we need to higher more senior engineer positions for upcoming transition. Senior engineers can bring more knowledge and exprience to the workplace. The company should consider it as factor of direction in the future. 
@@ -36,22 +36,28 @@ From the retiring_titles tabel, we are able to know the totoal number of employe
 ## Appendix Queries for Deliverable 3
 
 
-**create the table which summary for count of menotor eligible**
-SELECT count(title), title INTO mentorship_eligibilty_count
-FROM mentorship_eligibilty
-GROUP BY title
-ORDER BY COUNT(title) DESC;
+**create the table which summary for count of menotor eligible**  
+```
+SELECT count(title), title   
+INTO mentorship_eligibilty_count  
+FROM mentorship_eligibilty  
+GROUP BY title  
+ORDER BY COUNT(title) DESC;  
+```
 
-**change the colum name count to mentor_count because want to combine retiting table**
-ALTER TABLE mentorship_eligibilty_count
-RENAME COLUMN count TO mentor_count;
-
-**comparsion of retiring emplyoee and employee who are eligible to become mentor**
-SELECT 
-       rt.count,
-	   rt.title,
-	   mec.count,
-	   mec.title
-FROM mentorship_eligibilty_count as mec
-INNER JOIN retiring_titles as rt
-on (mec.title =rt.title);
+**change the colum name count to mentor_count because want to combine retiting table**  
+```
+ALTER TABLE mentorship_eligibilty_count  
+RENAME COLUMN count TO mentor_count;  
+```  
+**comparsion of retiring emplyoee and employee who are eligible to become mentor**  
+```
+SELECT   
+       rt.count,  
+	   rt.title,  
+	   mec.count,  
+	   mec.title  
+FROM mentorship_eligibilty_count as mec  
+INNER JOIN retiring_titles as rt  
+on (mec.title =rt.title);  
+```
